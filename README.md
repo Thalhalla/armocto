@@ -3,12 +3,12 @@ Deploy Arma III dedicated server inside an octohost
 
 ## Usage
 Normal octohost behavior, given the magic comments in the Dockerfile you’ll need a home directory for steam as /exports/armaocto/steam on the octohost,
-for retrieval of a suitable `steam` folder create one on a debian machine or use the method discussed below in the caveats, then push it at octo:
+for retrieval of a suitable `steam` folder create one on a debian machine or use the method discussed below in the caveats, place it on the octohost in /exports/armocto/, update your username and password in the Dockerfile, then push the repo at octo:
 ```
 git remote add octo git@YOUROCTOHOSTHERE
 git push octo master
 ```
-please read the caveats
+please read the caveats!
 
 ## Caveats
 now the first time you do this you’ll need to configure steam  because of the Steam Guard Token. You must get into the Container, login as the steam user and incant `/home/steam/steamcmd/steamcmd.sh`,
