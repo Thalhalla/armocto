@@ -16,6 +16,7 @@ EXPOSE  2305
 EXPOSE  2344
 EXPOSE  2345
 
+USER steam
 # Octohost specifics
 # NO_HTTP_PROXY
 # MOUNT_FROM_HOST /exports/armocto/steam /home/steam
@@ -23,20 +24,26 @@ EXPOSE  2345
 # Octohost ports
 
 # Game port (Inbound): 2302 UDP
-# PORTS_FROM_HOST 2302 2302/udp
+
+# PORTS_FROM_HOST 2302 2302/udp 0.0.0.0
 
 # Steam query port (Inbound): 2303 UDP
-# PORTS_FROM_HOST 2303 2303/udp
+
+# PORTS_FROM_HOST 2303 2303/udp 0.0.0.0
 
 # Steam master traffic port (Inbound): 2304 UDP
-# PORTS_FROM_HOST 2304 2304/udp
+
+# PORTS_FROM_HOST 2304 2304/udp 0.0.0.0
 
 # Client ports (Outbound): 2302-2305 UDP
-# PORTS_FROM_HOST 2305 2305/udp
+
+# PORTS_FROM_HOST 2305 2305/udp 0.0.0.0
 
 # BattlEye (Outbound): 2344 TCP/UDP
-# PORTS_FROM_HOST 2344 2344
-# PORTS_FROM_HOST 2344 2344/udp
+
+# PORTS_FROM_HOST 2344 2344 0.0.0.0
+# PORTS_FROM_HOST 2344 2344/udp 0.0.0.0
 
 # BattlEye (Outbound): 2345 TCP
-# PORTS_FROM_HOST 2345 2345
+
+# PORTS_FROM_HOST 2345 2345 0.0.0.0
