@@ -21,14 +21,6 @@ At this point you will have to do the dance to get the steam token.
 
 And to make all this persistent you’ll need to -v mount at least the steam directories, but I’ve just been mounting the entire /home/steam directory so I can save maps and other things out as well YMMV
 
-you can see an example here that I made for octohost.io
-https://github.com/Thalhalla/armocto
-
 saving the directory before migrating to octohost can be a tricky step.  Essentially I run `make run` on this project:
 http://thalhalla.github.io/dockarmaiii/
 and copy the home directory out at that time.  Then copy over to my octohost into the `/exports/armocto` directory
-
-view the dev docs here on creating a script for the steamcmd:
-https://developer.valvesoftware.com/wiki/SteamCMD#Creating_a_script
-that is the same as the default steamer.txt given here
-
